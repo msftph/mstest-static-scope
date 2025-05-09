@@ -24,3 +24,22 @@ After running, it is clear that static variables are shared between test classes
 5/7/2025 7:45:06 PM - Before TestTwoB: TestTwoA
 5/7/2025 7:45:06 PM - After TestTwoB: TestTwoB
 ```
+
+# Isolation
+
+One way to get isolation is to load the static class into an isolated AssemblyLoadContext and proxy all calls to static variables through the assembly load context. 
+After doing that, you can see calls to the same variable are isolated between a test using AssemblyLoadContext and one not using AssemblyLoadContext.
+
+In the results below, "OneIsolatedTests" is using AssemblyLoadContext and "TwoIsolatedTests" is using the static varible from the Default AssemblyLoadContext. 
+The test classes no longer share static state, but the individual test methods in the test class still share state.
+
+```
+5/9/2025 12:53:04 PM - Before MstestStaticScope.Isolated.Tests.OneIsolatedTests.TestOneIsolatedA: 
+5/9/2025 12:53:04 PM - After MstestStaticScope.Isolated.Tests.OneIsolatedTests.TestOneIsolatedA: TestOneIsolatedA
+5/9/2025 12:53:04 PM - Before MstestStaticScope.Isolated.Tests.OneIsolatedTests.TestOneIsolatedB: TestOneIsolatedA
+5/9/2025 12:53:04 PM - After MstestStaticScope.Isolated.Tests.OneIsolatedTests.TestOneIsolatedB: TestOneIsolatedB
+5/9/2025 12:53:04 PM - Before MstestStaticScope.Isolated.Tests.TwoIsolatedTests.TestTwoIsolatedA: 
+5/9/2025 12:53:04 PM - After MstestStaticScope.Isolated.Tests.TwoIsolatedTests.TestTwoIsolatedA: TestTwoIsolatedA
+5/9/2025 12:53:04 PM - Before MstestStaticScope.Isolated.Tests.TwoIsolatedTests.TestTwoIsolatedB: TestTwoIsolatedA
+5/9/2025 12:53:04 PM - After MstestStaticScope.Isolated.Tests.TwoIsolatedTests.TestTwoIsolatedB: TestTwoIsolatedB
+```

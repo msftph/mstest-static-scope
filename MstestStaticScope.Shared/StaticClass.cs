@@ -3,5 +3,5 @@
 public static class StaticClass
 
 {
-    public static string State = "";
+    public static string State { get; set; }
 }

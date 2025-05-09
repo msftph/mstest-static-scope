@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MstestStaticScope.Shared", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MstestStaticScope.Two.Tests", "MstestStaticScope.Two.Tests\MstestStaticScope.Two.Tests.csproj", "{E9A19EE7-76DC-4CCF-8C26-FA25C71E5385}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MstestStaticScope.Isolated.Tests", "MstestStaticScope.Isolated.Tests\MstestStaticScope.Isolated.Tests.csproj", "{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{E9A19EE7-76DC-4CCF-8C26-FA25C71E5385}.Release|x64.Build.0 = Release|Any CPU
 		{E9A19EE7-76DC-4CCF-8C26-FA25C71E5385}.Release|x86.ActiveCfg = Release|Any CPU
 		{E9A19EE7-76DC-4CCF-8C26-FA25C71E5385}.Release|x86.Build.0 = Release|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Debug|x64.Build.0 = Debug|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Debug|x86.Build.0 = Debug|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Release|x64.ActiveCfg = Release|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Release|x64.Build.0 = Release|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Release|x86.ActiveCfg = Release|Any CPU
+		{7B539CCF-E898-4A2F-BBCB-2EB5E406114E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
